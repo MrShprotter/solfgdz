@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 TEST 1
 """
 
+import os
 from pathlib import Path
+
+PROJECT_ROOT = os.path.normpath(os.path.dirname(__file__))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -118,7 +121,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+STATIC_ROOT = '/home/l/lazeyk80/lazeyk80.beget.tech/solfgdz/static'
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    '/home/l/lazeyk80/lazeyk80.beget.tech/solfgdz/static/',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
