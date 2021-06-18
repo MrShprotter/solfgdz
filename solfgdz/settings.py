@@ -119,7 +119,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    '/home/l/lazeyk80/lazeyk80.beget.tech/solfgdz/static/',
+    os.path.join(BASE_DIR, 'static')
 ]
 
 # Default primary key field type
